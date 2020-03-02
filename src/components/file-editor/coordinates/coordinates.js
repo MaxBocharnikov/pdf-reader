@@ -5,7 +5,7 @@ const Coordinates = ({coordinates}) => {
     if(!coordinates) return null;
     const renderedCoordinates = coordinates.map((coordinate) => {
         return (
-             <div className="coordinate-item">
+             <div key={coordinate.point} className="coordinate-item">
                  {coordinate.point}:
                  <span> {coordinate.x},</span>
                  <span> {coordinate.y},</span>

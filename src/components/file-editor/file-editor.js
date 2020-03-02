@@ -1,7 +1,7 @@
 import React from 'react';
 import PdfParser from '../../services/pdf-parser';
-import Pagination from '../pagination';
-import Coordinates from '../coordinates';
+import Pagination from './pagination';
+import Coordinates from './coordinates';
 
 const FileEditor = ({numPages, pageNumber, documentLoaded, coordinates, setFile, setPageNumber}) => {
 
