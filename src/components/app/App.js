@@ -14,6 +14,7 @@ const App = () => {
     return (
         <div className="container">
            <FileEditor
+               file = {file}
                numPages = {numPages}
                pageNumber = {pageNumber}
                documentLoaded = {documentLoaded}

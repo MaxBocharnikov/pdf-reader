@@ -2,6 +2,7 @@ import React from 'react';
 import PdfParser from '../../services/pdf-parser';
 import Pagination from './pagination';
 import Coordinates from './coordinates';
+import './file-editor.css';
 
 const FileEditor = ({numPages, pageNumber, documentLoaded, coordinates, setFile, setPageNumber}) => {
 
@@ -24,7 +25,6 @@ const FileEditor = ({numPages, pageNumber, documentLoaded, coordinates, setFile,
     return (
         <div className='file-editor'>
             <div className="form-group">
-                <label htmlFor="fileSelector">Choose PDF file</label>
                 <input
                     type="file"
                     className="form-control-file"

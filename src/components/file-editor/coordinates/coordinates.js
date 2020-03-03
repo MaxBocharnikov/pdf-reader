@@ -3,12 +3,20 @@ import './coordinates.css';
 
 const Coordinates = ({coordinates}) => {
     if(!coordinates) return null;
-    const renderedCoordinates = coordinates.map((coordinate) => {
+    const coordinatesToShow = [
+        coordinates[1],
+        coordinates[2],
+        coordinates[0],
+        coordinates[3],
+    ];
+    const renderedCoordinates = coordinatesToShow.map((coordinate) => {
         return (
              <div key={coordinate.point} className="coordinate-item">
-                 {coordinate.point}:
-                 <span> {coordinate.x},</span>
-                 <span> {coordinate.y},</span>
+                 {coordinate.point}
+                 <div>
+                     <span> {coordinate.x},</span>
+                     <span> {coordinate.y}</span>
+                 </div>
              </div>
         )
     });

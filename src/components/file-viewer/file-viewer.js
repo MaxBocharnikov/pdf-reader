@@ -1,7 +1,9 @@
 import React, {useEffect} from 'react';
-import { Document, Page } from 'react-pdf/dist/entry.webpack';
+import { Document, Page, pdfjs  } from 'react-pdf';
 import CanvasDrawer from '../../services/canvas-drawer';
 import './file-viewer.css';
+
+pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`; // loading pdf.worker.js
 
 const FileViewer = ({file, pageNumber, documentLoaded, setNumPages, setPageNumber, setDocumentLoaded, setCoordinates}) => {
 
@@ -28,9 +30,8 @@ const FileViewer = ({file, pageNumber, documentLoaded, setNumPages, setPageNumbe
         setPageNumber(1);
     }, [file]);
 
-
     return (
-        <div>
+        <div className={`file-viewer ${file ? `file-viewer-selected` : ''}`}>
             <Document
                 file={file}
                 onLoadSuccess={onDocumentLoadSuccess}

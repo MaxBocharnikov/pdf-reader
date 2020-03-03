@@ -28,9 +28,8 @@ export default class CanvasDrawer {
 
         this.ctx = canvas.getContext('2d');
 
-
-        canvas.width = this.pdfCanvas.width;
-        canvas.height = this.pdfCanvas.height;
+        canvas.width = parseInt(this.pdfCanvas.style.width, 10);
+        canvas.height = parseInt(this.pdfCanvas.style.height, 10);
 
         this.setCoordinates = setCoordinates;
     }
