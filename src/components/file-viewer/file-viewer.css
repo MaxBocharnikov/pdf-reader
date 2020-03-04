@@ -13,7 +13,6 @@
     position: relative;
     display: flex;
     align-items: center;
-    height: 100%;
     justify-content: center;
 }
 
@@ -26,4 +25,8 @@
     top: 0;
 
     cursor: crosshair;
+}
+
+.annotationLayer {
+    display: none;
 }
