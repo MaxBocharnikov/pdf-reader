@@ -4,9 +4,14 @@ import './FileData.css';
 
 const FileData = ({fileData}) => {
     if(!fileData) return null;
+    const fileDataItems = fileData.constructionTypeEntries.map((item, idx) => {
+        return (
+            <li key={idx} className="file-data-item">{item.name}: <span>{item.value}</span></li>
+        )
+    });
     return (
         <ul className="file-data">
-            <li className="file-data-item">Construction Type: {fileData.constructionType}</li>
+            {fileDataItems}
         </ul>
     )
 };

@@ -1,6 +1,7 @@
 .file-editor {
     padding: 1rem;
+    padding-right: 0;
     background: #EDEDEF;
-    width: 25vw;
+    width: 20vw;
 }
 

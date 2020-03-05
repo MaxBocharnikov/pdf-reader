@@ -1,0 +1,18 @@
+.file-data {
+    list-style: none;
+    text-transform: lowercase;
+
+    margin: 0;
+    padding: 0;
+
+    margin-bottom: 1rem;
+}
+
+.file-data-item {
+  font-weight: bold;
+}
+
+.file-data-item span {
+    font-weight: normal;
+    font-style: italic;
+}

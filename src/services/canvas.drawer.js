@@ -1,6 +1,7 @@
 
 export default class CanvasDrawer {
     parentBlock = null;
+    pdfViewer = null;
     pdfCanvas = null;
 
     canvas = null;
@@ -20,24 +21,30 @@ export default class CanvasDrawer {
     setCoordinates = null;
 
     constructor(selector, setCoordinates) {
-        this.parentBlock = document.querySelector('.pdf-viewer');
+        this.parentBlock = document.querySelector('.file-viewer-selected');
+        this.pdfViewer = document.querySelector('.pdf-viewer');
         this.pdfCanvas = document.querySelector(selector);
+
+
 
         this.canvas = document.querySelector('.draw-canvas');
         const canvas = this.canvas;
 
         this.ctx = canvas.getContext('2d');
 
-        canvas.width = parseInt(this.pdfCanvas.style.width, 10);
-        canvas.height = parseInt(this.pdfCanvas.style.height, 10);
+        // canvas.width  = parseInt(this.pdfCanvas.style.width, 10);
+        // canvas.height = parseInt(this.pdfCanvas.style.height, 10);
+
+        canvas.width = this.pdfViewer.offsetWidth;
+        canvas.height = this.pdfViewer.offsetHeight;
 
         this.setCoordinates = setCoordinates;
     }
 
 
     onMouseDown = e => {
-        this.canvasX = this.parentBlock.offsetLeft - window.scrollX;
-        this.canvasY = this.parentBlock.offsetTop -  window.scrollY;
+        this.canvasX = this.parentBlock.offsetLeft - this.parentBlock.scrollLeft;
+        this.canvasY = this.parentBlock.offsetTop -  this.parentBlock.scrollTop;
 
         this.last_mousex = parseInt(e.clientX-this.canvasX);
         this.last_mousey = parseInt(e.clientY-this.canvasY);
