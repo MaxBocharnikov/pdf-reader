@@ -1,5 +1,5 @@
 import React, {useState ,useEffect} from 'react';
-import './pagination.css';
+import './Pagination.css';
 
 const Pagination = ({show, currentPage, pageCount, setPage}) => {
     const [pages, setPages] = useState([]);
@@ -24,7 +24,7 @@ const Pagination = ({show, currentPage, pageCount, setPage}) => {
                 ]
             })
         }
-    }, [currentPage, pageCount]);
+    }, [currentPage, pageCount, setPages, setPage]);
 
     if(!show) return null;
     return (

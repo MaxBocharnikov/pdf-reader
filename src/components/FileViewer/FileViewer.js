@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import { Document, Page, pdfjs  } from 'react-pdf';
-import CanvasDrawer from '../../services/canvas-drawer';
-import './file-viewer.css';
+import CanvasDrawer from '../../services/canvas.drawer';
+import './FileViewer.css';
 
 pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`; // loading pdf.worker.js
 
@@ -24,11 +24,11 @@ const FileViewer = ({file, pageNumber, documentLoaded, setNumPages, setPageNumbe
         return () => {
             canvas && canvas.unRegister();
         }
-    }, [file, pageNumber, documentLoaded]);
+    }, [file, pageNumber, documentLoaded, setCoordinates]);
 
     useEffect(() => {
         setPageNumber(1);
-    }, [file]);
+    }, [file, setPageNumber]);
 
     return (
         <div className={`file-viewer ${file ? `file-viewer-selected` : ''}`}>

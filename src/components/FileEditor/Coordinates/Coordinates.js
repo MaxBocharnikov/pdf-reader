@@ -1,5 +1,5 @@
 import React from 'react';
-import './coordinates.css';
+import './Coordinates.css';
 
 const Coordinates = ({coordinates}) => {
     if(!coordinates) return null;

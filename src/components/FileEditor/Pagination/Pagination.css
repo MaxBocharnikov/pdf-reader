@@ -1,0 +1,6 @@
+.pagination {
+  flex-wrap: wrap;
+}
+.page-item {
+  cursor: pointer;
+}
