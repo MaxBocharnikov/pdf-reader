@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import { Document, Page, pdfjs  } from 'react-pdf';
 import CanvasDrawer from '../../services/canvas.drawer';
-import './FileViewer.css';
+import './FileViewer.scss';
 
 pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`; // loading pdf.worker.js
 

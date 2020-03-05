@@ -1,0 +1,16 @@
+.coordinates {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .coordinate-item {
+        width: 50%;
+        margin-bottom: 1rem;
+        font-weight: 500;
+
+        span {
+            font-weight: 400;
+        }
+    }
+
+}

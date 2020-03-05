@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './FileData.css';
+import './FileData.scss';
 
 const FileData = ({fileData}) => {
     if(!fileData) return null;

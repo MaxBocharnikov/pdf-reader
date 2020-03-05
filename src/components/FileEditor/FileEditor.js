@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import PdfParser from '../../services/pdf.parser';
 import Pagination from './Pagination/index';
 import Coordinates from './Coordinates';
-import './FileEditor.css';
+import './FileEditor.scss';
 import Api from '../../services/api';
 import FileData from './FileData/FileData';
 

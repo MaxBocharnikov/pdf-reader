@@ -2,7 +2,7 @@ import React, {useState, Fragment} from 'react';
 import FileEditor from '../FileEditor';
 import FileViewer from '../FileViewer/';
 import 'bootstrap/dist/css/bootstrap.css';
-import './App.css';
+import './App.scss';
 import Spinner from '../Spinner/';
 
 const App = () => {
