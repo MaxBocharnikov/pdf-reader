@@ -42,14 +42,15 @@ const FileEditor = ({numPages, pageNumber, documentLoaded, coordinates, setFile,
 
     return (
         <div className='file-editor'>
-            <div className="form-group">
+            <div className="custom-file">
                 <input
                     type="file"
-                    className="form-control-file"
-                    id="fileSelector"
+                    className="custom-file-input"
+                    id="customFile"
                     name="fileSelector"
                     onChange={onSelect}
                 />
+                <label className="custom-file-label text-truncate" htmlFor="customFile">{fileData ? fileData.fileName : 'Choose file'}</label>
             </div>
             <Pagination
                 show={documentLoaded}

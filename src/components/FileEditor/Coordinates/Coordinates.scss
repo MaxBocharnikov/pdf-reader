@@ -4,12 +4,22 @@
     justify-content: space-between;
 
     .coordinate-item {
-        width: 50%;
+        width: 45%;
         margin-bottom: 1rem;
         font-weight: 500;
+        text-align: center;
+
+        div {
+            background: #fff;
+            border-radius: 5px;
+        }
 
         span {
             font-weight: 400;
+        }
+
+        &:nth-child(odd) {
+            margin-right: .5rem;
         }
     }
 

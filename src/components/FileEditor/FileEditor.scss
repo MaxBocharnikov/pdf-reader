@@ -1,7 +1,10 @@
 .file-editor {
     padding: 1rem;
-    padding-right: 0;
     background: #EDEDEF;
     width: 20vw;
+
+    .custom-file {
+        margin-bottom: 2rem;
+    }
 }
 
